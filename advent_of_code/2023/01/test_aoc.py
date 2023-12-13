@@ -10,7 +10,7 @@ def example1():
     return solutions.parse(puzzle_input)
 
 
-def test_parse_example1(example1): # references fixture code above 5-10
+def test_parse_example1(example1):  # references fixture code above 5-10
     assert example1 == [
         "1abc2",
         "pqr3stu8vwx",
@@ -21,6 +21,7 @@ def test_parse_example1(example1): # references fixture code above 5-10
 
 def test_part1_example1(example1):
     assert solutions.part1(example1) == 142
+
 
 # def test_part2_example1(example1):
 #     assert solutions.part2(example1) == None

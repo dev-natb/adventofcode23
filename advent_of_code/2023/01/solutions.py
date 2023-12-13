@@ -1,14 +1,28 @@
 def parse(puzzle_input):
-    return puzzle_input.rstrip().split('\n')
+    return puzzle_input.rstrip().split("\n")
 
 
 def part1(data):
     """
-    Function to iterate over list and read 1st/last DIGIT in each string
-    return digits for each string on a single line
+    Function to iterate over list (of strings) and read 1st/last DIGIT in each string
+    return digits for each string on a single [new] line
     calculate value on each line and return total sum value
     """
-    return data
+    values = []
+
+    for item in data:
+        digits = []
+
+        for character in item:
+            if character.isdigit():
+                digits.append(character)
+
+        first = digits[0]
+        last = digits[-1]
+
+        values.append(int(first + last))
+
+    return sum(values)
 
 
 # def part2(data):
